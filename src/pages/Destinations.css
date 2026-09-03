@@ -1,0 +1,56 @@
+.destinations-page {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+}
+
+.destinations-header-banner {
+  background: var(--surface-elevated);
+  border-bottom: 1px solid var(--border);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.destinations-header-banner .eyebrow {
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.destinations-page-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.destinations-lead {
+  max-width: 620px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.destinations-search-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.destinations-filter-wrapper {
+  margin-bottom: 2rem;
+}
+
+.results-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.reset-link-btn {
+  font-size: 0.85rem;
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+}

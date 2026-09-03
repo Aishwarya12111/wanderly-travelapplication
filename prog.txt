@@ -1,0 +1,44 @@
+dom is a anydata which is reeceving from server in the format of gui and type is document sender and receriver have we can say document and 
+but the data travelling from sender to receiver thhta travelling in middle is not document 
+what is the meaning of ststic website and dynamic website?
+web application and web server?
+ans)web services provide some services frontend and backend database websites means it have severs
+database  youtubbe is a web application web site means it  provide some sevices
+web application needs:
+scaling
+database
+frontend
+backend
+it need security
+what is browser
+an application run on any server it is a platform independent we can run anywhere 
+browser have the connectivity to connect any ipadresses 
+DNA?
+domain name system
+http?
+secured it does not follow any protocol
+it has 7 layers 
+presengtation layer datalayer
+network layer-----
+it is a web application it can connect anything to the web servers
+BOM?
+bom is an object that is cover with an window
+windows iaan object wwhich has capacity to
+bom is a window object that is present in browser it uses java script
+which has the capacity to run any  js programm in browser in console it provide a run time envirnment in our browser sothat we can acess all the properties in windows object and we can create number of properties object funnctions in console 
+and use accordinng to our needs
+windows  is a builtinn module that can be run only in browser or either in server it have complte nodejs capacity so that we can create server from any where 
+node js
+node js is a run time environment developed by DENO which use of accesability to the user for real time communication server management accepting the request for any where ,firebox.
+deepdown  browser also  use nodejs  multithreading concepts  
+cors?
+cross origin resource sharing :toconnect to frontend 
+in website we have an link thta is called an origin that path only we called origin
+BOM?
+bom is a window 
+window it has power to control any browser like frontend
+backend  
+console 
+server
+
+ 

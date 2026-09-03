@@ -1,0 +1,18 @@
+promises is the keyword use to resolve and reject the working
+it is used to callback multiple 
+promise ,reject ,resolve, pending 
+resolve is one callback function where 
+reject is another callback function 
+prototype
+there is one unction is responsible for callback
+there are two function called then and catch
+then and catch are keywords
+then is used when the promise is fulfilled
+catch is used when the promise is rejected
+promises is mainly used for client server architecture for frontend and backend we cant use that only on frontend and only backend it is used both frontend and backend we use it is a two way communication
+promises are backend to backend 
+backend to  backend communication is called as state less communication
+
+
+
+   

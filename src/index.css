@@ -1,0 +1,371 @@
+/* ==========================================================================
+   WANDERLY PREMIUM DESIGN SYSTEM & CORE STYLES
+   Theme: Luxury Travel Startup / Modern Tourism Platform / SaaS UX
+   Color Palette: Deep Navy, Ocean Blue, Sky Blue, Off-White, Sunset Orange
+   ========================================================================== */
+
+:root {
+  /* Color Palette Tokens */
+  --primary-navy: #0F172A;
+  --navy-dark: #0A1120;
+  --ocean-blue: #0284C7;
+  --ocean-blue-hover: #0369A1;
+  --ocean-gradient: linear-gradient(135deg, #0F4C81 0%, #1FA2FF 100%);
+  --sky-blue: #38BDF8;
+  --sky-blue-light: #E0F2FE;
+  --sky-blue-subtle: #F0F9FF;
+  
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-muted: #F1F5F9;
+  --surface-elevated: #FAF9F6;
+  --section-bg-alt: #F0F4F8;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #94A3B8;
+  --text-on-ocean: #FFFFFF;
+  
+  --sunset-orange: #F97316;
+  --sunset-orange-hover: #EA580C;
+  --sunset-light: #FFF7ED;
+  
+  --border: #E2E8F0;
+  --border-dark: #CBD5E1;
+  --border-focus: #0284C7;
+  
+  /* Status Colors */
+  --success: #10B981;
+  --success-bg: #ECFDF5;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --error-bg: #FEF2F2;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Corner Radii (Consistent Premium 16px - 24px) */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+  
+  /* Elevation & Soft Glow Shadows */
+  --shadow-subtle: 0 2px 10px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 8px 30px rgba(15, 23, 42, 0.06);
+  --shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --shadow-overlay: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  --shadow-blue-glow: 0 10px 25px -5px rgba(2, 132, 199, 0.3);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout */
+  --container-max-width: 1320px;
+  --nav-height: 84px;
+  --nav-height-scrolled: 72px;
+}
+
+/* Base Resets & Global Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--text-primary);
+  background-color: var(--background);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  color: var(--text-primary);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Typography System */
+h1, h2, h3, .heading-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--primary-navy);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+}
+
+p, span, li, button, input, select, textarea {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ocean-blue);
+}
+
+.lead-text {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+.section-spacing {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-spacing {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+}
+
+/* Button Component System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Primary Ocean Blue Action Button */
+.btn-primary {
+  background: var(--ocean-gradient);
+  color: var(--text-on-ocean);
+  box-shadow: var(--shadow-blue-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -4px rgba(2, 132, 199, 0.45);
+}
+
+/* Secondary White/Outline Button */
+.btn-secondary {
+  background-color: var(--surface);
+  color: var(--primary-navy);
+  border: 1px solid var(--border-dark);
+}
+
+.btn-secondary:hover {
+  background-color: var(--sky-blue-subtle);
+  border-color: var(--ocean-blue);
+  color: var(--ocean-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Sunset Orange Accent Button */
+.btn-accent {
+  background-color: var(--sunset-orange);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+}
+
+.btn-accent:hover {
+  background-color: var(--sunset-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.4);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-navy);
+  padding: 0.6rem 1rem;
+}
+
+.btn-ghost:hover {
+  background-color: var(--sky-blue-light);
+  color: var(--ocean-blue);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Form Control Styling */
+.input-field {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.input-field:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Skeleton Loading Shimmer */
+.skeleton {
+  background: linear-gradient(90deg, #E2E8F0 25%, #F8FAFC 50%, #E2E8F0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-lg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Focus Ring for Keyboard Navigation */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--ocean-blue);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,44 @@
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--surface);
+  border: 1px dashed var(--border-dark);
+  border-radius: var(--radius-xl);
+  max-width: 540px;
+  margin: 3rem auto;
+}
+
+.empty-state-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: var(--surface-muted);
+  color: var(--text-tertiary);
+  margin-bottom: 1.5rem;
+}
+
+.empty-state-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state-message {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+  max-width: 400px;
+}
+
+.empty-state-reset-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+}

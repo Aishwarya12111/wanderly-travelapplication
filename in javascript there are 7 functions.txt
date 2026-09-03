@@ -1,0 +1,10 @@
+in javascript there are 7 functions
+callbackfunc
+closure
+arrow func
+anarmous function
+simple func
+return type func
+parameters
+rest parameter functions
+function is a keyword
